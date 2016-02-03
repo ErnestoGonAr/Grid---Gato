@@ -10,5 +10,19 @@ public class Gato extends JFrame{
 	public static void main(String []args){
 		new Gato();
 	}
-
+	
+	public Gato(){
+                super("Gato");
+                setSize(600,600);
+                setResizable(false);
+                setDefaultCloseOperation(EXIT_ON_CLOSE);
+                g.setLayout(new GridLayout(3,3));
+                for(int i=0; i<9; i++){
+                        buttons[i]=new Boton();
+                        g.add(buttons[i]);
+                        
+		}
+                add(g);
+                setVisible(true);
+	}
 }

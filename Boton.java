@@ -12,8 +12,16 @@ public class Boton extends JButton implements ActionListener{
 	X=new ImageIcon(this.getClass().getResource("X.png"));
 	O=new ImageIcon(this.getClass().getResource("O.png"));
 	this.addActionListener(this);
+	public void actionPerformed(ActionEvent e){
+		valor++;
+		valor%=3;
+		switch(valor){
+			case 0: setIcon(null); break;
+			case 1: setIcon(X); break;
+			case 2: setIcon(O); break;
+		}
 
-}
+	}
 
 }
 
